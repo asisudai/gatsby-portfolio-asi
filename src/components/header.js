@@ -72,15 +72,13 @@ const SiteHeader = styled.header`
   justify-content: center;
 `
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, github }) => (
   <SiteHeader>
     <Content>
       <p>
         <HomeLink to="/">{siteTitle}</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
-        <GitHubLink href="https://github.com/niklasmtj/gatsby-starter-julia">
-          GitHub
-        </GitHubLink>
+        <GitHubLink href={github} target="_blank">GitHub</GitHubLink>
       </p>
     </Content>
   </SiteHeader>
