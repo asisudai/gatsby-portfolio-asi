@@ -57,12 +57,16 @@ const useStyles = makeStyles({
   },
 })
 
-const Production = () => {
+const Production = ({ data }) => {
+
+  const { frontmatter, html } = data[0].node
+
   const classes = useStyles()
+
   return (
     <OuterContainer>
       <Container>
-        <NameHeader>Production</NameHeader>
+        <NameHeader>{frontmatter.title}</NameHeader>
         <Description>
           Production comes with challenges. We resolve them with workflows,
           communication, code and education.
