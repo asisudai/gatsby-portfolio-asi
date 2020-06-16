@@ -60,24 +60,27 @@ const useStyles = makeStyles({
 const Production = () => {
   const classes = useStyles()
   return (
-      <OuterContainer>
-        <Container>
-          <NameHeader>Production</NameHeader>
-          <Description>...something something production...</Description>
-          <div className={classes.root}>
-            <Slider
-              defaultValue={20}
-              getAriaValueText={valuetext}
-              aria-labelledby="discrete-slider-custom"
-              step={10}
-              valueLabelDisplay="off"
-              // orientation="vertical"
-              // aria-labelledby="vertical-slider"
-              marks={marks}
-            />
-          </div>
-        </Container>
-      </OuterContainer>
+    <OuterContainer>
+      <Container>
+        <NameHeader>Production</NameHeader>
+        <Description>
+          Production comes with challenges. We resolve them with workflows,
+          communication, code and education.
+        </Description>
+        <div className={classes.root}>
+          <Slider
+            defaultValue={20}
+            getAriaValueText={valuetext}
+            aria-labelledby="discrete-slider-custom"
+            step={10}
+            valueLabelDisplay="off"
+            // orientation="vertical"
+            // aria-labelledby="vertical-slider"
+            marks={marks}
+          />
+        </div>
+      </Container>
+    </OuterContainer>
   )
 }
 
