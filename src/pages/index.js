@@ -25,7 +25,6 @@ export const pageQuery = graphql`
              totalCount
              edges {
                node {
-                 id
                  frontmatter {
                    title
                  }
@@ -33,7 +32,7 @@ export const pageQuery = graphql`
                }
              }
            }
-           prodsections: allMarkdownRemark(
+           prodsections:allMarkdownRemark(
              sort: { fields: [frontmatter___date], order: DESC }
              filter: {
                fileAbsolutePath: { regex: "/production/" }
@@ -43,7 +42,6 @@ export const pageQuery = graphql`
              totalCount
              edges {
                node {
-                 id
                  frontmatter {
                    title
                    mark

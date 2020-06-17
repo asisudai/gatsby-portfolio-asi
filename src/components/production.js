@@ -27,25 +27,6 @@ const NameHeader = styled.h1`
   margin-bottom: 0;
 `
 
-const marks = [
-  {
-    value: 0,
-    label: "Story",
-  },
-
-  {
-    value: 20,
-    label: "Layout",
-  },
-  {
-    value: 40,
-    label: "Animation",
-  },
-  {
-    value: 100,
-    label: "Delivery",
-  },
-]
 
 const useStyles = makeStyles({
   root: {
@@ -56,6 +37,17 @@ const useStyles = makeStyles({
 const Production = ({ data, prodsections }) => {
   const { frontmatter, excerpt } = data[0].node
   console.log(prodsections)
+
+  const sec_marks = []
+  for (var key in prodsections) {
+    sec_marks.push({
+      value: prodsections[key].node.frontmatter.mark,
+      label: prodsections[key].node.frontmatter.title,
+    })
+  }
+
+  console.log(sec_marks)
+
   const classes = useStyles()
 
   return (
@@ -71,7 +63,7 @@ const Production = ({ data, prodsections }) => {
             valueLabelDisplay="off"
             // orientation="vertical"
             // aria-labelledby="vertical-slider"
-            marks={marks}
+            marks={sec_marks}
           />
         </div>
       </Container>
