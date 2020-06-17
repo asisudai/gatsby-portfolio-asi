@@ -47,34 +47,25 @@ const marks = [
   },
 ]
 
-function valuetext(value) {
-  return `${value}°C`
-}
-
 const useStyles = makeStyles({
   root: {
     height: 300,
   },
 })
 
-const Production = ({ data }) => {
-
-  const { frontmatter, html } = data[0].node
-
+const Production = ({ data, prodsections }) => {
+  const { frontmatter, excerpt } = data[0].node
+  console.log(prodsections)
   const classes = useStyles()
 
   return (
     <OuterContainer>
       <Container>
         <NameHeader>{frontmatter.title}</NameHeader>
-        <Description>
-          Production comes with challenges. We resolve them with workflows,
-          communication, code and education.
-        </Description>
+        <Description>{excerpt}</Description>
         <div className={classes.root}>
           <Slider
             defaultValue={20}
-            getAriaValueText={valuetext}
             aria-labelledby="discrete-slider-custom"
             step={10}
             valueLabelDisplay="off"
