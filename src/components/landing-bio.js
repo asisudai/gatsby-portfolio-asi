@@ -15,15 +15,21 @@ const OuterContainer = styled.div`
   height: 78vh;
 `
 
-const Description = styled.p`
+const TitleHeader = styled.h1`
+  font-size: 3.5rem;
+  margin-bottom: 0;
+`
+
+const SubTitle = styled.p`
   padding: 0;
   margin-bottom: 1rem;
   font-size: 1.4rem;
 `
 
-const NameHeader = styled.h1`
-  font-size: 3.5rem;
-  margin-bottom: 0;
+const Description = styled.p`
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 `
 
 const LandingBio = () => (
@@ -34,6 +40,7 @@ const LandingBio = () => (
           siteMetadata {
             title
             subtitle
+            description
           }
         }
       }
@@ -41,20 +48,21 @@ const LandingBio = () => (
     render={data => (
       <OuterContainer>
         <Container>
-          <NameHeader>{data.site.siteMetadata.title}</NameHeader>
-          <Description>{data.site.siteMetadata.subtitle}</Description>
+          <TitleHeader>{data.site.siteMetadata.title}</TitleHeader>
+          <SubTitle>{data.site.siteMetadata.subtitle}</SubTitle>
+          <Description>{data.site.siteMetadata.description}</Description>
         </Container>
       </OuterContainer>
     )}
   />
 )
 
-NameHeader.propTypes = {
+TitleHeader.propTypes = {
   siteTitle: PropTypes.string,
   subtitle: PropTypes.string,
 }
 
-NameHeader.defaultProps = {
+TitleHeader.defaultProps = {
   siteTitle: ``,
   subtitle: ``,
 }

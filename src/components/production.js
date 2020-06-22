@@ -29,17 +29,6 @@ const NameHeader = styled.h1`
   margin-bottom: 0;
 `
 
-const SectionContainer = styled.div`
-  display: 'none';,
-`
-
-const SectionCard = props => (
-  <SectionContainer id={props.id}>
-    <h3>{props.title}</h3>
-    <p>{props.text}</p>
-  </SectionContainer>
-)
-
 const useStyles = makeStyles({
   root: {
     height: 300,
@@ -66,11 +55,6 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
 
 const Production = ({ data, prodsections }) => {
   const { frontmatter, excerpt } = data[0].node
@@ -112,12 +96,13 @@ const Production = ({ data, prodsections }) => {
           />
           {prodsections &&
             prodsections.map(({ node }, i) => (
-              <TabPanel value={value} index={node.frontmatter.mark} key={i}>
+              <TabPanel
+                value={value}
+                index={node.frontmatter.mark}
+                key={i}
+              >
                 {node.excerpt}
               </TabPanel>
-              // <SectionCard id={node.frontmatter.mark}
-              //              title={node.frontmatter.title}
-              //              text={node.excerpt}/>
             ))}
         </div>
       </Container>
@@ -135,5 +120,11 @@ NameHeader.defaultProps = {
   siteTitle: ``,
   subtitle: ``,
 }
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
 
 export default Production
