@@ -1,6 +1,6 @@
 ---
 title: "Delivery"
 path: "/content/sections/"
-mark: 100
+mark: 3
 ---
 Something about delivery

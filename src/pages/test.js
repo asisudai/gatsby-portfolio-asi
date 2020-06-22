@@ -1,56 +1,108 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
 import Slider from "@material-ui/core/Slider"
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: 300,
-  },
-  margin: {
-    height: theme.spacing(3),
-  },
-}))
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const marks = [
   {
     value: 0,
-    label: "0°C",
+    label: "label 0",
+    text: "text 0"
   },
   {
-    value: 20,
-    label: "20°C",
+    value: 1,
+    label: "label 50",
+    text: "text 50"
   },
   {
-    value: 37,
-    label: "37°C",
-  },
-  {
-    value: 100,
-    label: "100°C",
+    value: 2,
+    label: "label 100",
+    text: "text 100"
   },
 ]
 
-function valuetext(value) {
-  return `${value}°C`
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
+
+function TabPanel(props) {
+  const { children, cvalue, index, key, ...other } = props;
+  console.log("i:", index, "v:", cvalue, "children:", children)
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={cvalue !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {cvalue === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
 }
 
-export default function DiscreteSlider() {
-  const classes = useStyles()
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  cvalue: PropTypes.any.isRequired,
+};
+
+export default function Test() {
+
+  const classes = useStyles();
+  const [cvalue, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <div className={classes.root}>
-      <Typography id="discrete-slider-custom" gutterBottom>
-        Custom marks
-      </Typography>
+      <h1>Test</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+
       <Slider
-        defaultValue={20}
-        getAriaValueText={valuetext}
+        defaultValue={0}
         aria-labelledby="discrete-slider-custom"
-        step={10}
-        valueLabelDisplay="auto"
+        step={null}
+        valueLabelDisplay="off"
         marks={marks}
+        min={0}
+        max={3}
+        getAriaValueText={null}
+        onChange={null}
+        onChangeCommitted={handleChange}
       />
+
+      {marks &&
+        marks.map(({ value, label, text }, i) => (
+          <TabPanel cvalue={cvalue} index={i} key={i}>
+            Item {text}
+          </TabPanel>
+        ))}
+
+      <TabPanel cvalue={cvalue} index={0}>
+        Item One
+      </TabPanel>
+      <TabPanel cvalue={cvalue} index={1}>
+        Item Two
+      </TabPanel>
+      <TabPanel cvalue={cvalue} index={2}>
+        Item Three
+      </TabPanel>
+
+
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 ---
 title: "Rigging"
 path: "/content/sections/"
-mark: 10
+mark: 1
 ---
 Something about rigging

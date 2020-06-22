@@ -1,6 +1,6 @@
 ---
 title: "Animation"
 path: "/content/sections/"
-mark: 0
+mark: 2
 ---
 Something about animation

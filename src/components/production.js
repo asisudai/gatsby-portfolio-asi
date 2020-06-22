@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { makeStyles } from "@material-ui/core/styles"
 import Slider from "@material-ui/core/Slider"
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
 const Container = styled.div`
   text-align: center;
@@ -27,6 +29,16 @@ const NameHeader = styled.h1`
   margin-bottom: 0;
 `
 
+const SectionContainer = styled.div`
+  display: 'none';,
+`
+
+const SectionCard = props => (
+  <SectionContainer id={props.id}>
+    <h3>{props.title}</h3>
+    <p>{props.text}</p>
+  </SectionContainer>
+)
 
 const useStyles = makeStyles({
   root: {
@@ -34,21 +46,50 @@ const useStyles = makeStyles({
   },
 })
 
+function TabPanel(props) {
+  const { children, value, index, key, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
 const Production = ({ data, prodsections }) => {
   const { frontmatter, excerpt } = data[0].node
-  console.log(prodsections)
 
-  const sec_marks = []
+  const marks = []
   for (var key in prodsections) {
-    sec_marks.push({
+    marks.push({
       value: prodsections[key].node.frontmatter.mark,
       label: prodsections[key].node.frontmatter.title,
     })
   }
 
-  console.log(sec_marks)
 
-  const classes = useStyles()
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <OuterContainer>
@@ -56,15 +97,28 @@ const Production = ({ data, prodsections }) => {
         <NameHeader>{frontmatter.title}</NameHeader>
         <Description>{excerpt}</Description>
         <div className={classes.root}>
+          {/* Doc: https://material-ui.com/api/slider/ */}
           <Slider
-            defaultValue={20}
+            defaultValue={0}
             aria-labelledby="discrete-slider-custom"
-            step={10}
+            step={null}
             valueLabelDisplay="off"
-            // orientation="vertical"
-            // aria-labelledby="vertical-slider"
-            marks={sec_marks}
+            marks={marks}
+            min={0}
+            max={5}
+            getAriaValueText={null}
+            onChange={null}
+            onChangeCommitted={handleChange}
           />
+          {prodsections &&
+            prodsections.map(({ node }, i) => (
+              <TabPanel value={value} index={node.frontmatter.mark} key={i}>
+                {node.excerpt}
+              </TabPanel>
+              // <SectionCard id={node.frontmatter.mark}
+              //              title={node.frontmatter.title}
+              //              text={node.excerpt}/>
+            ))}
         </div>
       </Container>
     </OuterContainer>
