@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import LandingBio from "../components/landing-bio"
 import Production from "../components/production"
+import Solution from "../components/solution"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -10,6 +11,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <LandingBio />
     <Production data={data.production.edges} prodsections={data.prodsections.edges} />
+    <Solution data={data.solution.edges}/>
   </Layout>
 )
 
@@ -47,6 +49,20 @@ export const pageQuery = graphql`
                    mark
                  }
                  html
+               }
+             }
+           }
+           solution: allMarkdownRemark(
+             sort: { fields: [frontmatter___date], order: DESC }
+             filter: { fileAbsolutePath: { regex: "/solution/index/" } }
+           ) {
+             totalCount
+             edges {
+               node {
+                 frontmatter {
+                   title
+                 }
+                 excerpt
                }
              }
            }
