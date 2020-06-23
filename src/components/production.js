@@ -4,10 +4,10 @@ import styled from "@emotion/styled"
 import { makeStyles } from "@material-ui/core/styles"
 import Slider from "@material-ui/core/Slider"
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 
 const Container = styled.div`
   text-align: center;
+  max-width: 820px;
 `
 
 const OuterContainer = styled.div`
@@ -29,9 +29,38 @@ const NameHeader = styled.h1`
   margin-bottom: 0;
 `
 
+const MarkdownContent = styled.div`
+
+  li {
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  p {
+    text-align: justify;
+    }
+
+  a {
+    text-decoration: none;
+    position: relative;
+
+    background-image: linear-gradient(
+      rgba(255, 250, 150, 0.8),
+      rgba(255, 250, 150, 0.8)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    &:hover {
+      background-size: 100% 88%;
+    }
+  }
+`
+
 const useStyles = makeStyles({
   root: {
-    height: 300,
+    height: 500,
   },
 })
 
@@ -48,12 +77,13 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
   );
 }
+
 
 
 const Production = ({ data, prodsections }) => {
@@ -66,6 +96,7 @@ const Production = ({ data, prodsections }) => {
       label: prodsections[key].node.frontmatter.title,
     })
   }
+  marks.sort((a, b) => (a.value > b.value) ? 1 : -1)
 
 
   const classes = useStyles();
@@ -74,6 +105,10 @@ const Production = ({ data, prodsections }) => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  function valueLabel(value) {
+    return marks[value].label;
+  }
 
   return (
     <OuterContainer>
@@ -86,10 +121,11 @@ const Production = ({ data, prodsections }) => {
             defaultValue={0}
             aria-labelledby="discrete-slider-custom"
             step={null}
-            valueLabelDisplay="off"
+            valueLabelDisplay="on"
+            valueLabelFormat={valueLabel}
             marks={marks}
             min={0}
-            max={5}
+            max={7}
             getAriaValueText={null}
             onChange={null}
             onChangeCommitted={handleChange}
@@ -101,7 +137,8 @@ const Production = ({ data, prodsections }) => {
                 index={node.frontmatter.mark}
                 key={i}
               >
-                {node.excerpt}
+                <MarkdownContent dangerouslySetInnerHTML={{ __html: node.html }} />
+
               </TabPanel>
             ))}
         </div>

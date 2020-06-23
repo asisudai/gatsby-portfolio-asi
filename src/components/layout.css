@@ -2,6 +2,11 @@ code {
   background-color: hsla(0, 0%, 0%, 0.04);
 }
 
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", "Avenir", "Helvetica", "sans-serif";

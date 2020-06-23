@@ -46,7 +46,7 @@ export const pageQuery = graphql`
                    title
                    mark
                  }
-                 excerpt
+                 html
                }
              }
            }

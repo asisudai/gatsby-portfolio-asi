@@ -1,6 +1,7 @@
 ---
 title: "Animation"
 path: "/content/sections/"
-mark: 2
+mark: 4
 ---
-Something about animation
+
+Animation?
