@@ -1,5 +1,5 @@
 ---
-title: "Production Challenges"
+title: "Challenges"
 subtitle:
 date: "2019-03-17"
 draft: false

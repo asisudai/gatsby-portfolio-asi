@@ -1,5 +1,5 @@
 ---
-title: "Solution"
+title: "Solutions"
 subtitle:
 date: "2019-03-17"
 draft: false
