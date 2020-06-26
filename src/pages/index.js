@@ -4,6 +4,7 @@ import LandingBio from "../components/landing-bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../components/section"
+import Skills from "../components/skills"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -11,6 +12,7 @@ const IndexPage = ({ data }) => (
     <LandingBio />
     <Section data={data.production.edges} markdowns={data.productionmd.edges} />
     <Section data={data.solution.edges} markdowns={data.solutionmd.edges}/>
+    <Skills />
   </Layout>
 )
 
