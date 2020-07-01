@@ -5,6 +5,8 @@ import styled from "@emotion/styled"
 const Container = styled.div`
   text-align: center;
   max-width: 820px;
+  min-height: 78vh;
+  padding-top: 30vh;
   @media only screen and (max-width: 800px) {
     max-width: 800px;
   }
@@ -16,37 +18,37 @@ const Container = styled.div`
   }
 
   /* #### Mobile Phones Portrait #### */
-  @media screen and (max-device-width: 480px) and (orientation: portrait){
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
     max-width: 480px;
   }
 
   /* #### Mobile Phones Landscape #### */
-  @media screen and (max-device-width: 640px) and (orientation: landscape){
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
     max-width: 640px;
   }
 
   /* #### iPhone 4+ Portrait or Landscape #### */
-  @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+  @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
     max-width: 320px;
   }
 
   /* #### iPhone 5 Portrait or Landscape #### */
-  @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+  @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
     max-width: 560px;
   }
 
   /* #### iPhone 6 and 6 plus Portrait or Landscape #### */
-  @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+  @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
     max-width: 667px;
   }
 
   /* #### Tablets Portrait or Landscape #### */
-  @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-        max-width: 768px;
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    max-width: 768px;
   }
 
   /* #### Desktops #### */
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     max-width: 820px;
   }
 `
@@ -56,7 +58,8 @@ const OuterContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  height: 78vh;
+  // height: 78vh;
+  // min-height: 78vh;
 `
 
 const NameHeader = styled.h1`
