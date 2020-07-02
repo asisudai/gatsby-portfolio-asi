@@ -1,6 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SContainer from "../components/container"
+import styled from "@emotion/styled"
+
+const Container = styled.div`
+  padding-top: 30vh;
+`
 
 const LandingBio = () => (
   <StaticQuery
@@ -16,10 +21,12 @@ const LandingBio = () => (
       }
     `}
     render={data => (
-      <SContainer title={data.site.siteMetadata.title}
-                  description={data.site.siteMetadata.description}
-                  subtitle={data.site.siteMetadata.subtitle}>
-      </SContainer>
+      <Container>
+        <SContainer title={data.site.siteMetadata.title}
+                    description={data.site.siteMetadata.description}
+                    subtitle={data.site.siteMetadata.subtitle}>
+        </SContainer>
+      </Container>
     )}
   />
 )

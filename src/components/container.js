@@ -6,7 +6,7 @@ const Container = styled.div`
   text-align: center;
   max-width: 820px;
   min-height: 78vh;
-  padding-top: 30vh;
+  // padding-top: 30vh;
   @media only screen and (max-width: 800px) {
     max-width: 800px;
   }
@@ -59,7 +59,7 @@ const OuterContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   // height: 78vh;
-  // min-height: 78vh;
+  min-height: 78vh;
 `
 
 const NameHeader = styled.h1`
