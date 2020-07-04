@@ -15,6 +15,13 @@ const MarkdownContent = styled.div`
   p {
     text-align: justify;
     }
+
+  p.quotation {
+      color:gray;
+      font-size: 80%;
+      margin-top: -2em;
+    }
+
   span {
     max-width: 200px;
   }
