@@ -12,12 +12,28 @@ const MarkdownContent = styled.div`
     margin-bottom: 0;
   }
 
+  h3 {
+    padding-top: 0.75em;
+
+    @media only screen and (max-width: 800px) {
+      min-height: 3rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      min-height: 4rem;
+    }
+    @media only screen and (max-width: 400px) {
+      min-height: 5rem;
+    }
+  }
+
   p {
     text-align: justify;
     }
 
   p.quotation {
-      text-align: center;
+      // position: relative;
+      // left: 80%;
       color:gray;
       font-size: 80%;
       margin-top: -2em;
