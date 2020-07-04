@@ -7,7 +7,9 @@ mark: 3
 ### *“Build it and they will come”*
 <p class="quotation">― Field of Dreams</p>
 
+<p class="message">
 The asset team build, paint, shade, groom and rig the assets while hitting the creative and technical requirements.
+</p>
 
 **Challenges and Solutions**
 - Constantly updating assets without breaking downstream, using approval steps.

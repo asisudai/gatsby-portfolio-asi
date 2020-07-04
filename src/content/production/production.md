@@ -4,9 +4,12 @@ path: "/content/sections/"
 mark: 1
 ---
 
-### *“Herding cats”*
+### *“That's a pie crust promise; easily made, easily broken!”*
 
-The production team keeps track of milestones, deadlines, reviews, staffing and the client ***while*** keeping in-communication and juggling priorities all at once.
+<p class="quotation">― Mary Poppins</p>
+<p class="message">
+Production *sometimes* can feel like "herding cats". Always keeping track of milestones, deadlines, reviews, staffing and client, while communicating and juggling priorities. All at once.
+</p>
 
 **Challenges and Solutions**
 - Task-tracking software that is well integrated with artists workflow.

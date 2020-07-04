@@ -17,9 +17,16 @@ const MarkdownContent = styled.div`
     }
 
   p.quotation {
+      text-align: center;
       color:gray;
       font-size: 80%;
       margin-top: -2em;
+      min-height: 2rem;
+    }
+
+
+  p.message{
+    min-height: 5rem;
     }
 
   span {

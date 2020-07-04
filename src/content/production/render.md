@@ -4,11 +4,12 @@ path: "/content/sections/"
 mark: 5
 ---
 
-### *“Darkness cannot drive out darkness: only light can do that".”*
+### *“Darkness cannot drive out darkness: only light can do that”*
 <p class="quotation">― Martin Luther King</p>
 
+<p class="message">
 The lighting, compositing and rendering team are all about the race to the finish line. Been on the end of the production, so often they get the "growing pain" of all the departments before them.
-
+</p>
 
 **Challenges and Solutions**
 - Keep the scenes light&fast to load. Using proxies and cached data.

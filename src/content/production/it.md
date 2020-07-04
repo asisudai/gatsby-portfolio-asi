@@ -4,10 +4,11 @@ path: "/content/sections/"
 mark: 6
 ---
 
-#### *“Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me”*
-<p class="quotation">― The Office</p>
+### *“If you type ‘Google’ into Google, you can break the internet.”*
+<p class="quotation">― The IT Crowd</p>
 
-The pipeline team continuously work to stream-line common-tasks while making other more complex-tasks doable. Finding stable and flexible solutions is key so we can keep building layers of solutions as the pipeline grows and expend.
+<p class="message">
+The IT team goal is to keep the server and services working - 99.9% of the time. IT challenges are balancing management and deployment of hardware&software, storage, security, high-availability servers, hardware evaluation and budget.</p>
 
 **Challenges and Solutions**
 - Keep track of [disk-space](https://shirosaidev.github.io/diskover/) and the context/usage of each file and folder.

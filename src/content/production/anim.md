@@ -4,10 +4,12 @@ path: "/content/sections/"
 mark: 4
 ---
 
-### *“I would like to make a film to tell children "it's good to be alive".”*
+### *“I would like to make a film to tell children "it's good to be alive"”*
 <p class="quotation">― Hayao Miyazaki</p>
 
+<p class="message">
 The animation team wants to bring the characters to life and play. A good pipeline let's them use their time to tell the character's story as apposed to dealing with  the technical steps.
+</p>
 
 **Challenges and Solutions**
 - Create rigs that are fun and expressive.
