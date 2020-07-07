@@ -5,6 +5,14 @@ import SContainer from "../components/container"
 import Box from '@material-ui/core/Box';
 import IOSSlider from "./slider"
 
+const CSilder = styled.div`
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+`
+
 const MarkdownContent = styled.div`
 
   li {
@@ -107,20 +115,22 @@ const Section = ({ data, markdowns }) => {
 
     return (
         <SContainer title={frontmatter.title} description={excerpt}>
-          <IOSSlider
-              defaultValue={0}
-              aria-labelledby="discrete-slider-custom"
-              step={null}
-              valueLabelDisplay="on"
-              valueLabelFormat={valueLabel}
-              marks={marks}
-              min={0}
-              max={marks_max}
-              getAriaValueText={null}
-              getAriaLabel={null}
-              onChange={handleChange}
-              onChangeCommitted={null}
-          />
+          <CSilder>
+            <IOSSlider
+                defaultValue={0}
+                aria-labelledby="discrete-slider-custom"
+                step={null}
+                valueLabelDisplay="on"
+                valueLabelFormat={valueLabel}
+                marks={marks}
+                min={0}
+                max={marks_max}
+                getAriaValueText={null}
+                getAriaLabel={null}
+                onChange={handleChange}
+                onChangeCommitted={null}
+            />
+          </CSilder>
           {markdowns &&
               markdowns.map(({ node }, i) => (
                   <TabPanel

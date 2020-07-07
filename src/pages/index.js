@@ -8,7 +8,7 @@ import Skills from "../components/skills"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
     <LandingBio />
     <Section data={data.production.edges} markdowns={data.productionmd.edges} />
     <Skills />
@@ -20,6 +20,12 @@ export default IndexPage
 
 export const pageQuery = graphql`
          {
+            site: site {
+                    siteMetadata {
+                      title
+                      subtitle
+                    }
+                  }
            production: allMarkdownRemark(
              sort: { fields: [frontmatter___date], order: DESC }
              filter: { fileAbsolutePath: { regex: "/production/index/" } }
@@ -34,7 +40,7 @@ export const pageQuery = graphql`
                }
              }
            }
-           productionmd:allMarkdownRemark(
+           productionmd: allMarkdownRemark(
              sort: { fields: [frontmatter___date], order: DESC }
              filter: {
                fileAbsolutePath: { regex: "/production/" }
