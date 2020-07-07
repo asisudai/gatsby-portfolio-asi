@@ -9,7 +9,7 @@ import Skills from "../components/skills"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
-    <LandingBio />
+    <LandingBio data={data.site}/>
     <Section data={data.production.edges} markdowns={data.productionmd.edges} />
     <Skills />
   </Layout>
