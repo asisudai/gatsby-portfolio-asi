@@ -16,6 +16,7 @@ const Skill = ({skill}) => {
   if (skill.link) {
       return (
         <Chip label={skill.name}
+            key={skill.name}
             size='small'
             color="primary"
             component="a"
@@ -27,6 +28,7 @@ const Skill = ({skill}) => {
   } else {
       return(
         <Chip label={skill.name}
+          key={skill.name}
           size='small'
           color="primary"
           variant="outlined" />
@@ -34,25 +36,23 @@ const Skill = ({skill}) => {
   }
 }
 
-const SkillsKey = ({key, skills}) => {
-  console.log(key);
-  console.log(skills);
+const SkillsKey = ({type, skills}) => {
   return (
-    skills.map((skill) => (
-      <Skill skill={skill}/>
+    skills.map((skill, i) => (
+      <Skill skill={skill} key={i}/>
       ))
   )
 }
 
 const Skills = ({data}) => {
 
-  const keys = Object.keys(data.skills);
+  const types = Object.keys(data.skills);
 
   return (
     <SContainer title="Skills" description="Things I do">
       <Container color="text.primary">
-        {keys.map((key) => (
-          <SkillsKey key={key} skills={data.skills[key]} />
+        {types.map((type, i) => (
+          <SkillsKey type={type} skills={data.skills[type]} key={i} />
         ))}
       </Container>
     </SContainer>

@@ -75,12 +75,13 @@ const MarkdownContent = styled.div`
 `
 
 function TabPanel(props) {
-    const { children, value, index, key, ...other } = props;
+    const { children, value, index, ...other } = props;
 
     return (
         <div
             role="tabpanel"
             hidden={value !== index}
+            key={index}
             id={`simple-tabpanel-${index}`}
             aria-labelledby={`simple-tab-${index}`}
             {...other}
@@ -134,10 +135,10 @@ const Section = ({ data, markdowns }) => {
           {markdowns &&
               markdowns.map(({ node }, i) => (
                   <TabPanel
-                      value={value}
-                      index={node.frontmatter.mark}
-                      key={i}
-                  >
+                    value={value}
+                    key={node.id}
+                    index={node.frontmatter.mark}
+                    >
                     <MarkdownContent dangerouslySetInnerHTML={{ __html: node.html }} />
                   </TabPanel>
               ))}
