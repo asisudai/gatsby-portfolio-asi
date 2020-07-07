@@ -1,44 +1,85 @@
 import React from "react"
 import SContainer from "../components/container"
-import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
-import icon from '../images/avatar/1.png'
+import styled from "@emotion/styled"
+
+const Container = styled.div`
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+`
+
+
+const Skill = ({skill}) => {
+
+  if (skill.link) {
+      return (
+        <Chip label={skill.name}
+            color="green"
+            size='small'
+            color={skill.color ? skill.color : "primary"}
+            component="a"
+            target="_blank"
+            clickable
+            href={skill.link ? skill.link : "/"}
+            variant = "outlined" />
+      )
+    } else {
+      return(
+        <Chip label={skill.name}
+          color="green"
+          size='small'
+          color={skill.color ? skill.color : "primary"}
+          variant="outlined" />
+      )
+    }
+}
 
 const Skills = ({data}) => {
 
-    const handleDelete = () => {
-        console.info('You clicked the delete icon.');
-    };
+    // TODO: move this to a data module.
+    const skillslist = [
+                        { 'name': 'Python', 'link': 'http://www.python.org' },
+                        { 'name': 'Shell', 'link': 'https://ohmyz.sh/' },
+                        { 'name': 'MySQL', 'link': 'https://www.mysql.com/' },
+                        { 'name': 'MongoDB', 'link': 'https://www.mongodb.com/' },
+                        { 'name': 'Docker', 'link': 'http://www.docker.com' },
+                        { 'name': 'ESXi', 'link': 'https://www.vmware.com/ca/products/esxi-and-esx.html' },
+                        { 'name': 'Grafana', 'link': 'https://grafana.com/' },
+                        { 'name': 'Promethues', 'link': 'https://prometheus.io/' },
+                        { 'name': 'Shotgun', 'link': 'https://www.shotgunsoftware.com/' },
+                        { 'name': 'Rest API',  },
+                        { 'name': 'Javascript',  },
+                        { 'name': 'HTML', },
+                        { 'name': 'CSS', },
+                        { 'name': 'React', 'link': 'https://reactjs.org/' },
+                        { 'name': 'Flask', 'link': 'https://flask.palletsprojects.com/' },
+                        { 'name': 'Django', 'link': 'https://www.djangoproject.com/' },
+                        { 'name': 'PyQT', 'link': 'https://doc.bccnsoft.com/docs/PyQt5/' },
+                        { 'name': 'Maya', 'link': 'https://www.autodesk.com/products/maya/overview' },
+                        { 'name': 'Nuke', 'link': 'https://www.foundry.com/products/nuke' },
+                        { 'name': 'Redshift', 'link': 'https://www.redshift3d.com/' },
+                        { 'name': 'Renderman', 'link': 'https://renderman.pixar.com/' },
+                        { 'name': 'Vray', 'link': 'https://www.chaosgroup.com/' },
+                        { 'name': 'Deadline', 'link': 'https://www.awsthinkbox.com/deadline' },
+                        { 'name': 'Qube', 'link': 'https://www.pipelinefx.com/  ' },
+                        { 'name': 'Pipeline' },
+                        { 'name': 'Rigging' },
+                        { 'name': 'Web-Dev' },
+                        { 'name': 'Sys Admin' },
+                        { 'name': 'Supervisor' },
+                        ];
 
-    const handleClick = () => {
-        console.info('You clicked the Chip.');
-    };
 
     return (
         <SContainer title="Skills" description="Things I do">
-            <Chip label="Basic" />
-            <Chip label="Basic" />
-            <Chip label="Disabled" disabled />
-            <Chip avatar={<Avatar>Python</Avatar>} label="Clickable" onClick={handleClick} />
-            <Chip
-                avatar={<Avatar alt="Natacha" src={icon} />}
-                label="Image"
-                onDelete={handleDelete}
-            />
-            <Chip
-                label="Custom delete icon"
-                onClick={handleClick}
-                onDelete={handleDelete}
-            />
-            <Chip label="Clickable Link" component="a" href="#chip" clickable />
-            <Chip
-                avatar={<Avatar>M</Avatar>}
-                label="Primary clickable"
-                clickable
-                color="primary"
-                onDelete={handleDelete}
-            />
-            <Chip label="Deletable primary" onDelete={handleDelete} color="primary" />
+            <Container color="text.primary">
+                {skillslist.map((skill) => (
+                  <Skill skill={skill} />
+                  ))}
+            </Container>
         </SContainer>
     )
 }
