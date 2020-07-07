@@ -1,5 +1,4 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import SContainer from "../components/container"
 import styled from "@emotion/styled"
 import Avatar from '@material-ui/core/Avatar';

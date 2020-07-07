@@ -10,6 +10,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'skills',
+        path: `${__dirname}/src/content/skills`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
