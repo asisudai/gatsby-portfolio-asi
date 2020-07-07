@@ -78,6 +78,10 @@ export const pageQuery = graphql`
                     name
                     link
                   }
+                  Libraries {
+                    name
+                    link
+                  }
                   Database {
                     name
                     link

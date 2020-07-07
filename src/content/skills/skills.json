@@ -36,6 +36,20 @@
         { "name": "ESXi", "link": "https://www.vmware.com/ca/products/esxi-and-esx.html" },
         { "name": "Grafana", "link": "https://grafana.com/" },
         { "name": "Promethues", "link": "https://prometheus.io/" }
+    ],
+    "Libraries": [
+        {
+            "name": "FFmpeg",
+            "link": "https://ffmpeg.org/"
+        },
+        {
+            "name": "OpenImageIO",
+            "link": "http://openimageio.org/"
+        },
+        {
+            "name": "OpenColorIO",
+            "link": "https://opencolorio.org/"
+        }
     ]
     }
 }
