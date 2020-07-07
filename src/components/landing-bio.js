@@ -40,7 +40,6 @@ const LandingBio = ({ data }) => {
       <SContainer title={data.siteMetadata.title}
         description={data.siteMetadata.description}
         subtitle={data.siteMetadata.subtitle}>
-
         <Avatar alt="Selfi" src={Metar} component={AContainer}
           className={classes.avatar} variant='circle'/>
       </SContainer>

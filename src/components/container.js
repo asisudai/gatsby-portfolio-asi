@@ -69,13 +69,13 @@ const NameHeader = styled.h1`
 
 const SubTitle = styled.p`
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.4rem;
 `
 const Description = styled.p`
   padding: 0;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.0rem;
 `
 
 const SContainer = ({ title, description, subtitle, children }) => {
