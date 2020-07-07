@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SContainer from "../components/container"
 import styled from "@emotion/styled"
+import Avatar from '@material-ui/core/Avatar';
+import Metar from "../images/avatar/avatar.png"
 
 const Container = styled.div`
   padding-top: 30vh;
@@ -25,6 +27,7 @@ const LandingBio = () => (
         <SContainer title={data.site.siteMetadata.title}
                     description={data.site.siteMetadata.description}
                     subtitle={data.site.siteMetadata.subtitle}>
+          <Avatar alt="Remy Sharp" src={Metar} />
         </SContainer>
       </Container>
     )}
