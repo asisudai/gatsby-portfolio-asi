@@ -65,6 +65,8 @@ export const pageQuery = graphql`
   }
 
   skills:skillsJson {
+                title
+                description
                 skills {
                   code {
                     name

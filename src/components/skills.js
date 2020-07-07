@@ -9,6 +9,10 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     width: 50%;
+
+    a:hover, span:hover {
+      filter: brightness(130%);
+    }
 `
 
 const Skill = ({skill}) => {
@@ -49,7 +53,7 @@ const Skills = ({data}) => {
   const types = Object.keys(data.skills);
 
   return (
-    <SContainer title="Skills" description="Things I do">
+    <SContainer title={data.title} description={data.description}>
       <Container color="text.primary">
         {types.map((type, i) => (
           <SkillsKey type={type} skills={data.skills[type]} key={i} />

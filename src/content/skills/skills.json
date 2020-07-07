@@ -1,4 +1,6 @@
-{"skills":
+{   "title": "Skills",
+    "description": "Things I do",
+    "skills":
     {
     "code":[
         { "name": "Python", "link": "http://www.python.org" },
