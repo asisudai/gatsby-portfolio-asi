@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import SContainer from "../components/container"
 import styled from "@emotion/styled"
 import Avatar from '@material-ui/core/Avatar';
-import Metar from "../images/avatar/pic02.jpg"
+import Metar from "../images/avatar/pic06.jpg"
 import { makeStyles } from '@material-ui/core/styles';
 
 const Container = styled.div`
@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   avatar: {
-    width: theme.spacing(12),
-    height: theme.spacing(12),
+    width: theme.spacing(15),
+    height: theme.spacing(15),
   },
 }));
 
@@ -42,7 +42,8 @@ const LandingBio = ({ data }) => {
         description={data.siteMetadata.description}
         subtitle={data.siteMetadata.subtitle}>
 
-        <Avatar alt="Selfi" src={Metar} component={AContainer} className={classes.avatar}/>
+        <Avatar alt="Selfi" src={Metar} component={AContainer}
+          className={classes.avatar} variant='circle'/>
       </SContainer>
     </Container>
   )
