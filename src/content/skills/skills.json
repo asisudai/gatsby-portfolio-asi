@@ -12,6 +12,7 @@
     "Web":[
         { "name": "Flask", "link": "https://flask.palletsprojects.com/" },
         { "name": "Django", "link": "https://www.djangoproject.com/" },
+        { "name": "Gatsby", "link": "https://www.gatsbyjs.org/" },
         { "name": "HTML" },
         { "name": "CSS" },
         { "name": "Javascript" }

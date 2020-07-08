@@ -89,7 +89,7 @@ const Layout = ({ children }) => (
               </SocialLink>
             </div>
             <p>
-            © {new Date().getFullYear()}, Built with
+              © {new Date().getFullYear()}, Built with
             {` `}
             </p>
             <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
