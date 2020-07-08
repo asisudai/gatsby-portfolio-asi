@@ -5,6 +5,7 @@ module.exports = {
     description: `Film, TV and Game Pipeline`,
     author: `@asisudai`,
     github: "https://github.com/asisudai",
+    linkedin: "http://www.linkedin.com/in/asudai",
     email: "asi@asimation.com",
   },
   plugins: [

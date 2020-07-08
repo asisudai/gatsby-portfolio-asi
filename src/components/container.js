@@ -6,7 +6,6 @@ const Container = styled.div`
   text-align: center;
   max-width: 820px;
   min-height: 78vh;
-  // padding-top: 30vh;
   @media only screen and (max-width: 800px) {
     max-width: 800px;
   }

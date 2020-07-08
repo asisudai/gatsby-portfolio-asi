@@ -2,7 +2,7 @@ import React from "react"
 import SContainer from "../components/container"
 import styled from "@emotion/styled"
 import Avatar from '@material-ui/core/Avatar';
-import Metar from "../images/avatar/pic06.jpg"
+import Selfish from "../images/avatar/selfish_400.jpg"
 import { makeStyles } from '@material-ui/core/styles';
 
 const Container = styled.div`
@@ -40,7 +40,7 @@ const LandingBio = ({ data }) => {
       <SContainer title={data.siteMetadata.title}
         description={data.siteMetadata.description}
         subtitle={data.siteMetadata.subtitle}>
-        <Avatar alt="Selfi" src={Metar} component={AContainer}
+        <Avatar alt="Selfi" src={Selfish} component={AContainer}
           className={classes.avatar} variant='circle'/>
       </SContainer>
     </Container>

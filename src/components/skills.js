@@ -10,8 +10,12 @@ const Container = styled.div`
     margin-left: auto;
     width: 50%;
 
+    @media only screen and (max-width: 600px) {
+    width: 80%;
+    }
+
     a:hover, span:hover {
-      filter: brightness(130%);
+      filter: brightness(120%);
     }
 `
 

@@ -37,13 +37,16 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             github
+            linkedin
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} github={data.site.siteMetadata.github} />
+        <Header siteTitle={data.site.siteMetadata.title}
+                github={data.site.siteMetadata.github}
+                linkedin={data.site.siteMetadata.linkedin}/>
         <Content>
           <main>{children}</main>
           <Footer>

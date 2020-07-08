@@ -1,7 +1,9 @@
+import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import React from "react"
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const Content = styled.div`
   max-width: 860px;
@@ -35,7 +37,7 @@ const NavLink = styled(Link)`
   }
 `
 
-const GitHubLink = styled.a`
+const SocialLink = styled(NavLink)`
   color: black;
   margin-left: 15px;
   text-decoration: none;
@@ -72,13 +74,20 @@ const SiteHeader = styled.header`
   justify-content: center;
 `
 
-const Header = ({ siteTitle, github }) => (
+
+const Header = ({ siteTitle, github, linkedin }) => (
   <SiteHeader>
     <Content>
       <p>
         <HomeLink to="/">{siteTitle}</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
-        <GitHubLink href={github} target="_blank">GitHub</GitHubLink>
+        <NavLink to="/services">Services</NavLink>
+        <SocialLink to={github} target="_blank" rel="noreferrer">
+          <GitHubIcon fontSize='small'/>
+          </SocialLink>
+        <SocialLink to={linkedin} target="_blank" rel="noreferrer">
+          <LinkedInIcon fontSize='small'/>
+          </SocialLink>
       </p>
     </Content>
   </SiteHeader>
