@@ -2,6 +2,14 @@ import React from "react"
 import SContainer from "../components/container"
 import Chip from '@material-ui/core/Chip';
 import styled from "@emotion/styled"
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+
 
 const Container = styled.div`
     right: 0;
@@ -18,6 +26,21 @@ const Container = styled.div`
       filter: brightness(120%);
     }
 `
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '75%',
+    right: 0,
+    left: 0,
+    paddingTop: '5vh',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+}));
 
 const Skill = ({skill}) => {
 
@@ -53,8 +76,13 @@ const SkillsKey = ({type, skills}) => {
 }
 
 const Skills = ({data, href}) => {
-
+  const classes = useStyles();
   const types = Object.keys(data.skills);
+
+  const [expanded, setExpanded] = React.useState(false);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <SContainer title={data.title} description={data.description} href={href}>
@@ -63,6 +91,29 @@ const Skills = ({data, href}) => {
           <SkillsKey type={type} skills={data.skills[type]} key={i} />
         ))}
       </Container>
+
+      <div className={classes.root}>
+
+        {data.help.map((item, i) => (
+          <Accordion expanded={expanded === i} onChange={handleChange(i)} key={i}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id={i + "-header"}
+            >
+              <Typography className={classes.heading}>
+                {item.title}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                {item.description}
+          </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </div>
+
     </SContainer>
 )
 }

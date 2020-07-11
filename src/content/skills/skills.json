@@ -1,58 +1,103 @@
 {   "title": "Skills",
     "description": "Services I can help with",
     "skills":
-    {
-    "code":[
-        { "name": "Python", "link": "http://www.python.org" },
-        { "name": "Shell", "link": "https://ohmyz.sh/" },
-        { "name": "React", "link": "https://reactjs.org/" },
-        { "name": "Go", "link": "http://www.python.org" },
-        { "name": "PyQT", "link": "https://doc.bccnsoft.com/docs/PyQt5/" }
-    ],
-    "Web":[
-        { "name": "Flask", "link": "https://flask.palletsprojects.com/" },
-        { "name": "Django", "link": "https://www.djangoproject.com/" },
-        { "name": "Gatsby", "link": "https://www.gatsbyjs.org/" },
-        { "name": "HTML" },
-        { "name": "CSS" },
-        { "name": "Javascript" }
-    ],
-    "Database":[
-        { "name": "MySQL", "link": "https://www.mysql.com/" },
-        { "name": "MongoDB", "link": "https://www.mongodb.com/" },
-        { "name": "PostgreSQL", "link": "https://www.postgresql.org/" }
-    ],
-    "CG/Animation":[
-        { "name": "Maya", "link": "https://www.autodesk.com/products/maya/overview" },
-        { "name": "Nuke", "link": "https://www.foundry.com/products/nuke" },
-        { "name": "Redshift", "link": "https://www.redshift3d.com/" },
-        { "name": "Renderman", "link": "https://renderman.pixar.com/" },
-        { "name": "Vray", "link": "https://www.chaosgroup.com/" },
-        { "name": "Deadline", "link": "https://www.awsthinkbox.com/deadline" },
-        { "name": "Qube", "link": "https://www.pipelinefx.com/  " },
-        { "name": "Shotgun", "link": "https://www.shotgunsoftware.com/" },
-        { "name": "Pipeline" },
-        { "name": "Rigging" }
-    ],
-    "Sys Admin":[
-        { "name": "Docker", "link": "http://www.docker.com" },
-        { "name": "ESXi", "link": "https://www.vmware.com/ca/products/esxi-and-esx.html" },
-        { "name": "Grafana", "link": "https://grafana.com/" },
-        { "name": "Promethues", "link": "https://prometheus.io/" }
-    ],
-    "Libraries": [
         {
-            "name": "FFmpeg",
-            "link": "https://ffmpeg.org/"
+        "code":[
+            { "name": "Python", "link": "http://www.python.org" },
+            { "name": "Shell", "link": "https://ohmyz.sh/" },
+            { "name": "React", "link": "https://reactjs.org/" },
+            { "name": "Go", "link": "http://www.python.org" },
+            { "name": "PyQT", "link": "https://doc.bccnsoft.com/docs/PyQt5/" }
+        ],
+        "Web":[
+            { "name": "Flask", "link": "https://flask.palletsprojects.com/" },
+            { "name": "Django", "link": "https://www.djangoproject.com/" },
+            { "name": "Gatsby", "link": "https://www.gatsbyjs.org/" },
+            { "name": "HTML" },
+            { "name": "CSS" },
+            { "name": "Javascript" }
+        ],
+        "Database":[
+            { "name": "MySQL", "link": "https://www.mysql.com/" },
+            { "name": "MongoDB", "link": "https://www.mongodb.com/" },
+            { "name": "PostgreSQL", "link": "https://www.postgresql.org/" }
+        ],
+        "CG/Animation":[
+            { "name": "Maya", "link": "https://www.autodesk.com/products/maya/overview" },
+            { "name": "Nuke", "link": "https://www.foundry.com/products/nuke" },
+            { "name": "Redshift", "link": "https://www.redshift3d.com/" },
+            { "name": "Renderman", "link": "https://renderman.pixar.com/" },
+            { "name": "Vray", "link": "https://www.chaosgroup.com/" },
+            { "name": "Deadline", "link": "https://www.awsthinkbox.com/deadline" },
+            { "name": "Qube", "link": "https://www.pipelinefx.com/  " },
+            { "name": "Shotgun", "link": "https://www.shotgunsoftware.com/" },
+            { "name": "Pipeline" },
+            { "name": "Rigging" }
+        ],
+        "Sys Admin":[
+            { "name": "Docker", "link": "http://www.docker.com" },
+            { "name": "ESXi", "link": "https://www.vmware.com/ca/products/esxi-and-esx.html" },
+            { "name": "Grafana", "link": "https://grafana.com/" },
+            { "name": "Promethues", "link": "https://prometheus.io/" }
+        ],
+        "Libraries": [
+            {
+                "name": "FFmpeg",
+                "link": "https://ffmpeg.org/"
+            },
+            {
+                "name": "OpenImageIO",
+                "link": "http://openimageio.org/"
+            },
+            {
+                "name": "OpenColorIO",
+                "link": "https://opencolorio.org/"
+            }
+        ]
+        },
+    "help":
+    [
+        {
+            "title": "Database infrastructure",
+            "description": "MongoDB and SQL databases development, replication, backups, optimization."
         },
         {
-            "name": "OpenImageIO",
-            "link": "http://openimageio.org/"
+            "title": "File system cleanup and backups",
+            "description": "Smart and automated disk-space management, monitoring, backup, archiving and cleanup. "
         },
         {
-            "name": "OpenColorIO",
-            "link": "https://opencolorio.org/"
+            "title": "Virtualization and containers  infrastructure",
+            "description": "Deploying services using ESXi, Virtual machines, Docker."
+        },
+        {
+            "title": "Render farm management and monitoring",
+            "description": "Management, deploying and monitoring of render farms. Deadline, Qube, Rush."
+        },
+        {
+            "title": "Shotgun integration and extensions",
+            "description": "Integration of Shotgun into the pipeline, , training, workflows and advance production monitoring and tracking."
+        },
+        {
+            "title": "Monitoring and metrics",
+            "description": "Using Grafana, prometheus and sentry services to collect and monitor backend/frontend services."
+        },
+        {
+            "title": "Render engines support",
+            "description": "Pipeline and optimizations of render-engines. Such as Redshift, Renderman, Vray, Arnold."
+        },
+        {
+            "title": "Proprietary asset-management framework",
+            "description": "Asset frame work that is agnostic to DCC and OS. Rich feature set: Film and Episodic, Version approval, verison linking, easily extendable... and much more"
+
+        },
+        {
+            "title": "Color accurate pipeline",
+            "description": "Deploy color accurate pipeline from Photoshop, Zbrush, Mari all the way to DI and reviews."
+        },
+        {
+            "title": "Pipeline and tools for most industry DCC",
+            "description": "Custom support and pipeline of tool for most DCCs out there: Maya, Nuke, Katana, Unity, Mari, RV and more."
         }
     ]
-    }
+
 }

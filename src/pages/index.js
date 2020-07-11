@@ -5,13 +5,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Skills from "../components/skills"
 import Experince from "../components/experience"
+import Section from "../components/section"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
     <LandingBio data={data.site} href={"#"+data.skills.title}/>
-    <Skills data={data.skills} href={"#" + data.experience.nodes[0].title}/>
-    <Experince data={data.experience.nodes[0]} />
+    <Skills data={data.skills}/>
+    <Experince data={data.experience} />
+    <Section data={data.production.edges} markdowns={data.productionmd.edges} />
   </Layout>
 )
 
@@ -27,44 +29,84 @@ export const pageQuery = graphql`
             description
           }
         }
+
   skills:skillsJson {
-                title
-                description
-                skills {
-                  code {
-                    name
-                    link
-                  }
-                  Web {
-                    name
-                    link
-                  }
-                  Sys_Admin {
-                    name
-                    link
-                  }
-                  Libraries {
-                    name
-                    link
-                  }
-                  Database {
-                    name
-                    link
-                  }
-                  CG_Animation {
-                    name
-                    link
-                  }
-                }
-  }
-  experience: allExperienceJson {
-    nodes {
-      jobs {
-        primary
-        secondary
+    title
+    description
+    skills {
+      CG_Animation {
+        link
+        name
       }
-      title
+      Database {
+        link
+        name
+      }
+      Libraries {
+        link
+        name
+      }
+      Sys_Admin {
+        link
+        name
+      }
+      Web {
+        link
+        name
+      }
+      code {
+        link
+        name
+      }
+    }
+    help {
       description
+      title
+    }
+  }
+
+  experience: experienceJson {
+    jobs {
+      primary
+      secondary
+    }
+    title
+    description
+  }
+
+  production: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }
+    filter: { fileAbsolutePath: { regex: "/production/index/" } }
+  ) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+        excerpt
+        id
+      }
+    }
+  }
+
+  productionmd: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }
+    filter: {
+      fileAbsolutePath: { regex: "/production/" }
+      frontmatter: { mark: { ne: null } }
+    }
+  ) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+          mark
+        }
+        html
+        id
+      }
     }
   }
 }
