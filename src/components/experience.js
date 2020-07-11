@@ -42,7 +42,7 @@ const Experince = ({ data, href }) => {
   return (
     <Container color="text.primary">
       <SContainer title={data.title}
-                  description={ diff_years() + " Years of experience"}
+                  description={diff_years() + data.description}
                   href={href}>
         <List dense={true}>
           {data.jobs.map((node, i) => (

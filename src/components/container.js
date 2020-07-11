@@ -9,7 +9,7 @@ const OuterContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  min-height: 75vh;
+  padding-top: 20vh;
   position: relative;
 `
 
@@ -73,6 +73,7 @@ const SubTitle = styled.p`
   margin-bottom: 0.5rem;
   font-size: 1.4rem;
 `
+
 const Description = styled.p`
   padding: 0;
   margin-bottom: 0.5rem;
@@ -80,9 +81,10 @@ const Description = styled.p`
 `
 
 const ContainerBottom = styled.div`
-    position: absolute;
+    // position: absolute;
     left: 50%;
-    margin-left: -30px;
+    // margin-left: -30px;
+    padding-top: 10vh;
     bottom: 0;
 `
 

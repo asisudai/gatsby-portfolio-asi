@@ -643,7 +643,7 @@ a::selection {
 }
 
 .scroller a {
-  /* position: absolute; */
+  opacity: 0.25;
   padding-top: 60px;
   bottom: 20px;
   left: 50%;
@@ -658,7 +658,7 @@ a::selection {
   transition: opacity .3s;
 }
 .scroller a:hover {
-  opacity: .5;
+  opacity: 0.15;
 }
 .scroller a span {
   position: absolute;
@@ -708,7 +708,7 @@ a::selection {
     opacity: 1;
   }
   60% {
-    box-shadow: 0 0 0 5px rgba(100, 100, 100, 0.2);
+    box-shadow: 0 0 0 10px rgba(100, 100, 100, 0.2);
     opacity: 0;
   }
   100% {
@@ -719,12 +719,13 @@ a::selection {
   0% {
     opacity: 0;
   }
-  30% {
+  40% {
+    box-shadow: 0 0 0 35px rgba(100, 100, 100, 0.1);
     opacity: 1;
   }
   60% {
-    box-shadow: 0 0 0 30px rgba(100, 100, 100, 0.1);
-    opacity: 0;
+    box-shadow: 0 0 0 35px rgba(100, 100, 100, 0.1);
+    opacity: .5;
   }
   100% {
     opacity: 0;
