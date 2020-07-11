@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
-import Experince from "../components/experience"
+// import Experince from "../components/experience"
 import Section from "../components/section"
 
 const Container = styled.div`
@@ -17,7 +17,7 @@ const ServicesPage = ({ data }) => (
         <Container color="text.primary">
           <Section data={data.production.edges} markdowns={data.productionmd.edges} />
         </Container>
-        <Experince data={data.experience.nodes}/>
+        {/* <Experince data={data.experience.nodes}/> */}
     </Layout>
 )
 
@@ -69,11 +69,12 @@ export const pageQuery = graphql`
     }
   }
 
-  experience: allExperienceJson {
-      nodes {
-        primary
-        secondary
-      }
-    }
 }
 `
+
+// experience: allExperienceJson {
+//     nodes {
+//       primary
+//       secondary
+//     }
+//   }

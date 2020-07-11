@@ -5,10 +5,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Selfish from "../images/avatar/selfish_400.jpg"
 import { makeStyles } from '@material-ui/core/styles';
 
-const Container = styled.div`
-  // padding-top: 5vh;
-  display: 'flex',
-`
 const AContainer = styled.div`
   text-align: center;
   color:red;
@@ -31,19 +27,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const LandingBio = ({ data }) => {
+const LandingBio = ({ data, href }) => {
 
   const classes = useStyles();
 
   return (
-    <Container>
-      <SContainer title={data.siteMetadata.title}
-        description={data.siteMetadata.description}
-        subtitle={data.siteMetadata.subtitle}>
-        <Avatar alt="Selfi" src={Selfish} component={AContainer}
-          className={classes.avatar} variant='circle'/>
-      </SContainer>
-    </Container>
+    <SContainer title={data.siteMetadata.title}
+      description={data.siteMetadata.description}
+      subtitle={data.siteMetadata.subtitle}
+      href={href}
+      >
+      <Avatar alt="Selfi" src={Selfish} component={AContainer}
+        className={classes.avatar} variant='circle'/>
+    </SContainer>
   )
 }
 

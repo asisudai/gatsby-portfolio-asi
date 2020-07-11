@@ -29,7 +29,7 @@ const StyledListItem = withStyles({
 
 
 
-const Experince = ({data}) => {
+const Experince = ({ data, href }) => {
 
   function diff_years() {
     var dt1 = new Date();
@@ -41,9 +41,11 @@ const Experince = ({data}) => {
 
   return (
     <Container color="text.primary">
-      <SContainer title="Experience" description={ diff_years() + " Years of experience"}>
+      <SContainer title={data.title}
+                  description={ diff_years() + " Years of experience"}
+                  href={href}>
         <List dense={true}>
-          {data.map((node, i) => (
+          {data.jobs.map((node, i) => (
             <StyledListItem dense={true} key={i}>
               <ListItemAvatar>
                 <Avatar>

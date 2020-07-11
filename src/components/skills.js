@@ -52,12 +52,12 @@ const SkillsKey = ({type, skills}) => {
   )
 }
 
-const Skills = ({data}) => {
+const Skills = ({data, href}) => {
 
   const types = Object.keys(data.skills);
 
   return (
-    <SContainer title={data.title} description={data.description}>
+    <SContainer title={data.title} description={data.description} href={href}>
       <Container color="text.primary">
         {types.map((type, i) => (
           <SkillsKey type={type} skills={data.skills[type]} key={i} />

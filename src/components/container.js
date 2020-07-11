@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 
 const OuterContainer = styled.div`
   display: flex;
@@ -8,6 +10,7 @@ const OuterContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   min-height: 75vh;
+  position: relative;
 `
 
 const Container = styled.div`
@@ -76,14 +79,36 @@ const Description = styled.p`
   font-size: 1.0rem;
 `
 
-const SContainer = ({ title, description, subtitle, children }) => {
+const ContainerBottom = styled.div`
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 0;
+`
+
+const Scroller = ({href}) => {
   return (
-    <OuterContainer>
+    <ContainerBottom>
+      <div class="scroller">
+        <AnchorLink to={href}>
+          <span></span>Scroll
+        </AnchorLink>
+        {/* <a href={href}><span></span>Scroll</a> */}
+      </div>
+    </ContainerBottom>
+  )
+}
+
+
+const SContainer = ({ title, description, subtitle, href, children }) => {
+  return (
+    <OuterContainer id={title}>
       <Container>
         <NameHeader>{title}</NameHeader>
         <SubTitle>{subtitle}</SubTitle>
         <Description>{description}</Description>
         { children }
+        {href && <Scroller href={href} />}
       </Container>
     </OuterContainer>
   )
