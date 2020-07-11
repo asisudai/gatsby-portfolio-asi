@@ -2,10 +2,18 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 
+const OuterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 75vh;
+`
+
 const Container = styled.div`
   text-align: center;
   max-width: 820px;
-  min-height: 78vh;
+
   @media only screen and (max-width: 800px) {
     max-width: 800px;
   }
@@ -50,15 +58,6 @@ const Container = styled.div`
   @media screen and (min-width: 1024px) {
     max-width: 820px;
   }
-`
-
-const OuterContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  // height: 78vh;
-  min-height: 78vh;
 `
 
 const NameHeader = styled.h1`

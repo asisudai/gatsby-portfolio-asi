@@ -6,7 +6,7 @@ import Selfish from "../images/avatar/selfish_400.jpg"
 import { makeStyles } from '@material-ui/core/styles';
 
 const Container = styled.div`
-  padding-top: 30vh;
+  // padding-top: 5vh;
   display: 'flex',
 `
 const AContainer = styled.div`
