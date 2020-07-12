@@ -4,16 +4,18 @@ import LandingBio from "../components/landing-bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Skills from "../components/skills"
-import Experince from "../components/experience"
+import Experience from "../components/experience"
 import Section from "../components/section"
+import Contact from "../components/contact"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
     <LandingBio data={data.site} href={"#"+data.skills.title}/>
-    <Experince data={data.experience} />
+    <Experience data={data.experience} />
     <Skills data={data.skills}/>
     <Section data={data.production.edges} markdowns={data.productionmd.edges} />
+    <Contact/>
   </Layout>
 )
 

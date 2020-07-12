@@ -6,11 +6,15 @@ import Box from '@material-ui/core/Box';
 import IOSSlider from "./slider"
 
 const CSilder = styled.div`
-    right: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    width: 85%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 85%;
+`
+
+const Container = styled.div`
+  min-height: 100vh;
 `
 
 const MarkdownContent = styled.div`
@@ -115,6 +119,7 @@ const Section = ({ data, markdowns }) => {
     }
 
     return (
+      <Container>
         <SContainer title={frontmatter.title} description={excerpt}>
           <CSilder>
             <IOSSlider
@@ -143,6 +148,7 @@ const Section = ({ data, markdowns }) => {
                   </TabPanel>
               ))}
         </SContainer>
+      </Container>
     )
 }
 

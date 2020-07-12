@@ -29,7 +29,7 @@ const StyledListItem = withStyles({
 
 
 
-const Experince = ({ data, href }) => {
+const Experience = ({ data, href }) => {
 
   function diff_years() {
     var dt1 = new Date();
@@ -61,4 +61,4 @@ const Experince = ({ data, href }) => {
   )
 }
 
-export default Experince
+export default Experience
