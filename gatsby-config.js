@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Asi Sudai`,
-    subtitle: `Consultant/software developer`,
+    subtitle: `Consultant & Software Developer`,
     description: `Film, TV and Game Pipeline`,
     author: `@asisudai`,
     github: "https://github.com/asisudai",

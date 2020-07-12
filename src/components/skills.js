@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 
+
 const Container = styled.div`
     right: 0;
     left: 0;
@@ -29,16 +30,28 @@ const Container = styled.div`
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'block',
     width: '75%',
     right: 0,
     left: 0,
-    paddingTop: '5vh',
+    paddingTop: '3vh',
     marginRight: 'auto',
     marginLeft: 'auto',
+    fontSize: '1rem'
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
+    fontFamily: 'inherit',
+    fontSize: 'inherit',
+
+  },
+  details: {
+    paddingTop: '2px',
+  },
+  description: {
+    textAlign: 'left',
+    fontFamily: 'inherit',
+    fontWeight: '400',
+    fontSize: '85%',
   },
 }));
 
@@ -93,7 +106,6 @@ const Skills = ({data, href}) => {
       </Container>
 
       <div className={classes.root}>
-
         {data.help.map((item, i) => (
           <Accordion expanded={expanded === i} onChange={handleChange(i)} key={i}>
             <AccordionSummary
@@ -105,10 +117,10 @@ const Skills = ({data, href}) => {
                 {item.title}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
+            <AccordionDetails className={classes.details}>
+              <Typography className={classes.description}>
                 {item.description}
-          </Typography>
+              </Typography>
             </AccordionDetails>
           </Accordion>
         ))}

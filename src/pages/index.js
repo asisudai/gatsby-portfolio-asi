@@ -11,8 +11,8 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
     <LandingBio data={data.site} href={"#"+data.skills.title}/>
-    <Skills data={data.skills}/>
     <Experince data={data.experience} />
+    <Skills data={data.skills}/>
     <Section data={data.production.edges} markdowns={data.productionmd.edges} />
   </Layout>
 )
