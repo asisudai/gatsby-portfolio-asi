@@ -56,8 +56,15 @@ const GatsbyLink = styled.a`
 
 const Footer = styled.footer`
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-top: 5vh;
+  flex-flow: column wrap;
+  align-content: center;
+`
+
+const FooterRow = styled.div`
+  // display: flex;
+  // width:100%;
 `
 
 const Layout = ({ children }) => (
@@ -81,19 +88,20 @@ const Layout = ({ children }) => (
         <Content>
           <main>{children}</main>
           <Footer>
-            <div>
+            <FooterRow>
               <SocialLink to={data.site.siteMetadata.github} target="_blank" rel="noreferrer">
                 <GitHubIcon fontSize='small' />
               </SocialLink>
               <SocialLink to={data.site.siteMetadata.linkedin} target="_blank" rel="noreferrer">
                 <LinkedInIcon fontSize='small' />
               </SocialLink>
-            </div>
-            <p>
-              © {new Date().getFullYear()}, Built with
-            {` `}
-            </p>
-            <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+            </FooterRow>
+            <FooterRow>
+              <span>© {new Date().getFullYear()}, Built with {` `}</span>
+              <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+              <span>{` `}~{` `}</span>
+              <GatsbyLink href="https://www.gatsbyjs.org">Fork it!</GatsbyLink>
+            </FooterRow>
           </Footer>
         </Content>
       </>
