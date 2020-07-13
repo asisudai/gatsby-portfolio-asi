@@ -36,7 +36,7 @@ const NavLink = styled(Link)`
 `
 
 const HomeLink = styled(NavLink)`
-  margin-left: 0;
+  margin-left: 15px;
 `
 
 const SiteHeader = styled.header`
@@ -52,7 +52,7 @@ const Header = ({ siteTitle, github, linkedin }) => (
       <p>
         <HomeLink to="/">{siteTitle}</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/services">Services</NavLink>
+        <HomeLink to="/contact">Contact</HomeLink>
       </p>
     </Content>
   </SiteHeader>
