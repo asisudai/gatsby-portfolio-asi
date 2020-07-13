@@ -11,7 +11,6 @@ const AContainer = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  }
 `
 const useStyles = makeStyles((theme) => ({
   root: {

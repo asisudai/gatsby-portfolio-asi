@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
     <Experience data={data.experience} />
     <Skills data={data.skills}/>
     <Section data={data.production.edges} markdowns={data.productionmd.edges} />
-    <Contact />
+    <Contact data={data.site}/>
   </Layout>
 )
 
@@ -29,6 +29,8 @@ export const pageQuery = graphql`
             title
             subtitle
             description
+            github
+            linkedin
           }
         }
 

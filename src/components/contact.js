@@ -1,7 +1,6 @@
 import React from 'react';
 import SContainer from "../components/container"
 import styled from "@emotion/styled"
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -15,26 +14,26 @@ const Container = styled.div`
   margin: auto;
 `
 
-const Contact = () => {
+const Contact = ({ data }) => {
 
   return (
     <SContainer title="Need Help?"
-      description="Need a Vancouver Consultant or Development work? let's build something.">
+      description="Need a Consultant or Development work? let's build something.">
       <Container>
         <List component="nav" aria-label="main mailbox folders">
-          <ListItem button>
+          <ListItem button component="a" href={data.siteMetadata.github}>
             <ListItemIcon>
               <GitHubIcon />
             </ListItemIcon>
             <ListItemText primary="Github" />
           </ListItem>
-          <ListItem button>
+          <ListItem button component="a" href={data.siteMetadata.linkedin}>
             <ListItemIcon>
               <LinkedInIcon />
             </ListItemIcon>
             <ListItemText primary="Linkedin" />
           </ListItem>
-          <ListItem button>
+          <ListItem button component="a" href="/contact">
             <ListItemIcon>
               <EmailIcon />
             </ListItemIcon>
