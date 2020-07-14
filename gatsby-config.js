@@ -6,7 +6,10 @@ module.exports = {
     author: `@asisudai`,
     github: "https://github.com/asisudai",
     linkedin: "http://www.linkedin.com/in/asudai",
+    photography: "http://www.asisudai.ca",
+    wiki: "http://pipeline.asimation.com",
     email: "asi@asimation.com",
+
   },
   plugins: [
     `gatsby-plugin-material-ui`,

@@ -12,6 +12,8 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
+import PageviewIcon from '@material-ui/icons/Pageview';
 
 import Header from "./header"
 import "./layout.css"
@@ -60,6 +62,7 @@ const Footer = styled.footer`
   justify-content: center;
   flex-flow: column wrap;
   align-content: center;
+  padding-top: 8vh;
 `
 
 const FooterRow = styled.div`
@@ -76,6 +79,8 @@ const Layout = ({ children }) => (
             title
             github
             linkedin
+            photography
+            wiki
           }
         }
       }
@@ -94,6 +99,12 @@ const Layout = ({ children }) => (
               </SocialLink>
               <SocialLink to={data.site.siteMetadata.linkedin} target="_blank" rel="noreferrer">
                 <LinkedInIcon fontSize='small' />
+              </SocialLink>
+              <SocialLink to={data.site.siteMetadata.photography} target="_blank" rel="noreferrer">
+                <CameraAltIcon fontSize='small' />
+              </SocialLink>
+              <SocialLink to={data.site.siteMetadata.wiki} target="_blank" rel="noreferrer">
+                <PageviewIcon fontSize='small' />
               </SocialLink>
             </FooterRow>
             <FooterRow>
