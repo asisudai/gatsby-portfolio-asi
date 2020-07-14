@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
+
 const OuterContainer = styled.div`
   display: flex;
   align-items: center;
@@ -92,9 +93,7 @@ const Scroller = ({href}) => {
   return (
     <ContainerBottom>
       <div class="scroller">
-        <AnchorLink to={href}>
-          <span></span>Scroll
-        </AnchorLink>
+        <AnchorLink to={href}><span></span>Scroll</AnchorLink>
         {/* <a href={href}><span></span>Scroll</a> */}
       </div>
     </ContainerBottom>
