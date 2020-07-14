@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter Julia...Asi :)
+  Gatsby Portfolio Starter forked from Julia :)
 </h1>
 
 [GatsbyJS](https://www.gatsbyjs.org/) is a free and open source static website builder build on React. It's one implementation of the [JAMstack](https://jamstack.org/) idea which creates high speed webpages.
@@ -15,6 +15,7 @@
 - Landingpage
 - Blog overview page
 - Markdown sourcing from /content folder
+- Json sourcing from /content folder
 - Estimated reading time for each post
 - Styled components with emotion
 - Netlify deployment friendly
@@ -48,6 +49,8 @@ export default PageName
 
 To change the name on the landing page please modify the `title` in `gatsby-config.js`
 
+To change links on footer and header pages please modify the `title` in `gatsby-config.js`
+
 The Nunito typeface is included as a npm module in `gatsby-browser.js` and in `/components/layout.css`
 
 ---
@@ -64,7 +67,7 @@ This starter ships with the main Gatsby configuration files you might need to ge
 
     ```sh
     # create a new Gatsby site using the julia starter
-    gatsby new julia-starter https://github.com/niklasmtj/gatsby-starter-julia
+    gatsby new asi-starter https://github.com/asisudai/gatsby-portfolio-asi
     ```
 
 1.  **Start developing.**
@@ -72,7 +75,7 @@ This starter ships with the main Gatsby configuration files you might need to ge
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd julia-starter/
+    cd asi-starter/
     gatsby develop
     ```
 

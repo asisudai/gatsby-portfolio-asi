@@ -58,23 +58,23 @@
     "help":
     [
         {
-            "title": "Database Driven Pipeline",
+            "title": "Database Driven Pipelines",
             "description": "Databases gives speed and flexibility for the whole team: Fast artist tools, Complicated present and future predictions can be made with historical data available. Good databases I like to use are usually MongoDB and MySQL databases development, replication, backups, optimization. MySQL is create for relational data where MongoDB for fast and unsorted/dynamic data."
         },
         {
-            "title": "File System Health",
+            "title": "File System IT & Cleanup",
             "description": "Very few people like to clean and even fewer like to clean other people belongings. Plus it takes time and a good understanding of the data you're about to clean. For that reason, it's best to structure the files/data in a way that makes it easier to clean later. Or even better, deploy smart and automated cleaning process. All of which to help backup, archive and monitoring of data."
         },
         {
-            "title": "VM's & Dockers",
+            "title": "VM's & Dockers Services",
             "description": "Pipeline and IT using many services in the backend to help productions. Deploying and managing these services can be by deploying services using ESXi, Virtual machines, Docker."
         },
         {
-            "title": "Render Farm",
+            "title": "Render Farm Deployment and Management",
             "description": "Management, deploying and monitoring of render-farm can be done smartly, using automated emails/alert, production-driven queuing systems, expanding to the cloud and overall making wrangler life easier."
         },
         {
-            "title": "Shotgun integration & advance dashboards",
+            "title": "Shotgun Integration & Advance Dashboards",
             "description": "Integrating Shotgun into the artist's workflow helps the production team to be on top of everything. Integration in tools, workflows, triggers for automation. While Shotgun pages are great, many studios end-up building custom Dashboard to better monitor their productions, with more complicated queries and tracking.."
         },
         {
@@ -86,16 +86,16 @@
             "description": "There are many great render engines out there. Each has requires optimizations and a pipeline around it to push the render times down. Optimizations are usually caching assets, creating proxies, pre-converting textures. ."
         },
         {
-            "title": "Proprietary, Feature Rich Asset Framework",
+            "title": "Asset Management: Proprietary NextGen Framework",
             "description": "Developing proprietary asset-frameworks is one of my passions. I put a lot of love and a rich feature set in those. To name a few of the features: Agnostic to DCC/OS. Each publish is a version, each version can be linked to other versions/asset/take, each version has a metadata, supports approval/rejection. supports smart disk-space cleanup, post-processing, farm publishing, pre-publish asset checks... and much more."
 
         },
         {
-            "title": "Color Accurate",
+            "title": "Color Accurate From Start to End",
             "description": "It can be somewhat \"boring\" area in production... having a colour-accurate pipeline from end to end is the only way to guarantee quality delivery of images. Images coming out of Photoshop should flow to rendering with the correct colorspace, with as little assumptions made on the way. Add to that calibrated monitors and you're in business!."
         },
         {
-            "title": "Tools Tools & More Tools",
+            "title": "Custom Artists Tools For All DCCs",
             "description": "Artists need custom tools and support. Many steps and processes can be simplified. Free the artists do focus on \"art\" and less fighting tech challenges along the way, that makes a good goal. All of the DCC could use more tooling: Maya, Nuke, Katana, Unity, Mari, Zbrush, Mudbox..."
         }
     ]

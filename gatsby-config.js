@@ -5,6 +5,7 @@ module.exports = {
     description: `Film, TV and Game Pipeline`,
     author: `@asisudai`,
     github: "https://github.com/asisudai",
+    fork: "https://github.com/asisudai/gatsby-portfolio-asi",
     linkedin: "http://www.linkedin.com/in/asudai",
     photography: "http://www.asisudai.ca",
     wiki: "http://pipeline.asimation.com",

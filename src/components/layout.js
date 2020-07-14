@@ -78,6 +78,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             github
+            fork
             linkedin
             photography
             wiki
@@ -109,9 +110,9 @@ const Layout = ({ children }) => (
             </FooterRow>
             <FooterRow>
               <span>© {new Date().getFullYear()}, Built with {` `}</span>
-              <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+              <GatsbyLink href="https://www.gatsbyjs.org" target="_blank" rel="noreferrer">Gatsby</GatsbyLink>
               <span>{` `}~{` `}</span>
-              <GatsbyLink href="https://www.gatsbyjs.org">Fork it!</GatsbyLink>
+              <GatsbyLink href={data.site.siteMetadata.fork} target="_blank" rel="noreferrer">Fork it!</GatsbyLink>
             </FooterRow>
           </Footer>
         </Content>

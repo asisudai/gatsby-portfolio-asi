@@ -11,7 +11,7 @@ import Contact from "../components/contact"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
-    <LandingBio data={data.site} href={"#"+data.skills.title}/>
+    <LandingBio data={data.site} href={"#" + data.experience.title}/>
     <Experience data={data.experience} />
     <Skills data={data.skills}/>
     {/* <Section data={data.production.edges} markdowns={data.productionmd.edges} /> */}
