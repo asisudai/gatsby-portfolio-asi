@@ -39,11 +39,15 @@ export const pageQuery = graphql`
     title
     description
     skills {
-      CG_Animation {
+      code {
         link
         name
       }
       Database {
+        link
+        name
+      }
+      CG_Animation {
         link
         name
       }
@@ -56,10 +60,6 @@ export const pageQuery = graphql`
         name
       }
       Web {
-        link
-        name
-      }
-      code {
         link
         name
       }

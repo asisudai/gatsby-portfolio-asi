@@ -51,7 +51,8 @@ const Header = ({ siteTitle, github, linkedin }) => (
     <Content>
       <p>
         <HomeLink to="/">{siteTitle}</HomeLink>
-        <NavLink to="/blog">Blog</NavLink>
+        {/* <NavLink to="/blog">Blog</NavLink> */}
+        <NavLink to="http://pipeline.asimation.com">Wiki</NavLink>
         <HomeLink to="/contact">Contact</HomeLink>
       </p>
     </Content>
