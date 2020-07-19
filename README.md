@@ -156,10 +156,5 @@ Looking for more guidance? The perfect place to learn more about GatsbyJS is the
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
-
-You can also directly deploy this starter via Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/niklasmtj/gatsby-starter-julia)
 
 <!-- AUTO-GENERATED-CONTENT:END -->

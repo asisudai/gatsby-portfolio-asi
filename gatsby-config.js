@@ -24,13 +24,13 @@ module.exports = {
         path: `${__dirname}/src/content/skills`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'bio',
-        path: `${__dirname}/src/content/bio`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: 'bio',
+    //     path: `${__dirname}/src/content/bio`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -11,7 +11,7 @@ import Contact from "../components/contact"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
-    <LandingBio data={data.site} bio={data.bio.edges[0]} href={"#" + data.skills.title}/>
+    <LandingBio data={data.site} href={"#" + data.skills.title}/>
     <Skills data={data.skills}/>
     <Experience data={data.experience} />
     {/* <Section data={data.production.edges} markdowns={data.productionmd.edges} /> */}
@@ -77,21 +77,6 @@ export const pageQuery = graphql`
     }
     title
     description
-  }
-
-  bio: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }
-    filter: { fileAbsolutePath: { regex: "/bio/" } }
-  ) {
-    totalCount
-    edges {
-      node {
-        frontmatter {
-          title
-        }
-        html
-      }
-    }
   }
 
   production: allMarkdownRemark(

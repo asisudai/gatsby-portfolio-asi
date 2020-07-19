@@ -37,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const LandingBio = ({ data, bio, href }) => {
+const LandingBio = ({ data, href }) => {
+
 
   const classes = useStyles();
-  console.log(bio);
 
   return (
     <SContainer title={data.siteMetadata.title}
@@ -48,7 +48,10 @@ const LandingBio = ({ data, bio, href }) => {
       subtitle={data.siteMetadata.subtitle}
       href={href}>
       <Bio>
-        <MarkdownContent dangerouslySetInnerHTML={{ __html: bio.node.html }} />
+        {/* <MarkdownContent dangerouslySetInnerHTML={{ __html: bio.node.html }} /> */}
+        <MarkdownContent>
+          Hey! I have been playing and self-learning Computer Graphics for as long as I remember. What started, years ago, as a hobby after school, has turned into a life adventure, taking me on a trip around the world!
+        </MarkdownContent>
       </Bio>
       <Avatar alt="Selfi" src={Selfish} component={AContainer}
         className={classes.avatar} variant='circle'/>
