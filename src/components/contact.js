@@ -18,7 +18,7 @@ const Contact = ({ data }) => {
 
   return (
     <SContainer title="Need Help?"
-      description="Need a Consultant or Development work? let's build something.">
+      description="If you're looking for a developer or a consultant? let's build something.">
         <StyledList component="nav" aria-label="main mailbox folders">
             <ListItem button component="a" href="/contact">
               <ListItemIcon>
