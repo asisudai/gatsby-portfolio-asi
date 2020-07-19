@@ -13,6 +13,16 @@ const AContainer = styled.div`
   margin-right: auto;
 `
 
+const Bio = styled.div`
+  padding-top: 10px;
+  margin: auto;
+  width:75%;
+  `
+const MarkdownContent = styled.div`
+  text-align: center;
+  font-size: 90%;
+`
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -27,16 +37,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const LandingBio = ({ data, href }) => {
+const LandingBio = ({ data, bio, href }) => {
 
   const classes = useStyles();
+  console.log(bio);
 
   return (
     <SContainer title={data.siteMetadata.title}
       description={data.siteMetadata.description}
       subtitle={data.siteMetadata.subtitle}
-      href={href}
-      >
+      href={href}>
+      <Bio>
+        <MarkdownContent dangerouslySetInnerHTML={{ __html: bio.node.html }} />
+      </Bio>
       <Avatar alt="Selfi" src={Selfish} component={AContainer}
         className={classes.avatar} variant='circle'/>
     </SContainer>
