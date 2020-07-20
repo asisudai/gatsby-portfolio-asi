@@ -14,11 +14,28 @@ const StyledList = styled(List)`
   display: flex;
 `
 
+const Bio = styled.div`
+  padding-top: 10px;
+  margin: auto;
+  width:75%;
+  `
+const MarkdownContent = styled.div`
+  text-align: center;
+  font-size: 90%;
+`
+
 const Contact = ({ data }) => {
 
   return (
     <SContainer title="Need Help?"
-      description="If you're looking for a developer or a consultant? let's build something.">
+      description="Are you looking for a Pipeline Developer or a consultant?">
+        <Bio>
+          <MarkdownContent>
+            <p>
+            I'm available for short or long contracts. My expertise lays in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew.
+          </p>
+          </MarkdownContent>
+
         <StyledList component="nav" aria-label="main mailbox folders">
             <ListItem button component="a" href="/contact">
               <ListItemIcon>
@@ -39,6 +56,7 @@ const Contact = ({ data }) => {
               <ListItemText primary="Linkedin" />
             </ListItem>
         </StyledList>
+      </Bio>
     </SContainer>
   )
 }

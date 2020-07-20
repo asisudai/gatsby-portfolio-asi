@@ -50,7 +50,9 @@ const LandingBio = ({ data, href }) => {
       <Bio>
         {/* <MarkdownContent dangerouslySetInnerHTML={{ __html: bio.node.html }} /> */}
         <MarkdownContent>
-          Hey! I have been playing and self-learning Computer Graphics for as long as I remember. What started, years ago, as a hobby after school, has turned into a life adventure, taking me on a trip around the world!
+          <p>
+            Dyslexia doesn't mean you're dumb! It only means you need to find your way of learning, what better than learn what you love. So I did! I'm a self-taught computer engineer with a passion for visual arts and storytelling. I love it when science and art come together.
+          </p>
         </MarkdownContent>
       </Bio>
       <Avatar alt="Selfi" src={Selfish} component={AContainer}
