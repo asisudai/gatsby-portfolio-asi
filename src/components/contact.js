@@ -14,28 +14,21 @@ const StyledList = styled(List)`
   display: flex;
 `
 
-const Bio = styled.div`
-  padding-top: 10px;
-  margin: auto;
-  width:75%;
-  `
-const MarkdownContent = styled.div`
+const CenterDiv = styled.div`
   text-align: center;
-  font-size: 90%;
+  width: 80%;
+  margin: auto;
 `
+
 
 const Contact = ({ data }) => {
 
   return (
     <SContainer title="Need Help?"
-      description="Are you looking for a Pipeline Developer or a consultant?">
-        <Bio>
-          <MarkdownContent>
-            <p>
-            I'm available for short or long contracts. My expertise lays in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew.
-          </p>
-          </MarkdownContent>
-
+      description="Are you looking for a Pipeline Developer or a consultant?"
+      subdescription="I'm available for short or long contracts. My expertise lays in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew."
+    >
+      <CenterDiv>
         <StyledList component="nav" aria-label="main mailbox folders">
             <ListItem button component="a" href="/contact">
               <ListItemIcon>
@@ -56,7 +49,7 @@ const Contact = ({ data }) => {
               <ListItemText primary="Linkedin" />
             </ListItem>
         </StyledList>
-      </Bio>
+      </CenterDiv>
     </SContainer>
   )
 }

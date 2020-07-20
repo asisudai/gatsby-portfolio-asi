@@ -13,16 +13,6 @@ const AContainer = styled.div`
   margin-right: auto;
 `
 
-const Bio = styled.div`
-  padding-top: 10px;
-  margin: auto;
-  width:75%;
-  `
-const MarkdownContent = styled.div`
-  text-align: center;
-  font-size: 90%;
-`
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -46,15 +36,8 @@ const LandingBio = ({ data, href }) => {
     <SContainer title={data.siteMetadata.title}
       description={data.siteMetadata.description}
       subtitle={data.siteMetadata.subtitle}
+      subdescription="Dyslexia doesn't mean you're dumb! It only means you need to find your way of learning, what better than learn what you love. So I did! I'm a self-taught computer engineer with a passion for visual arts and storytelling. I love it when science and art come together."
       href={href}>
-      <Bio>
-        {/* <MarkdownContent dangerouslySetInnerHTML={{ __html: bio.node.html }} /> */}
-        <MarkdownContent>
-          <p>
-            Dyslexia doesn't mean you're dumb! It only means you need to find your way of learning, what better than learn what you love. So I did! I'm a self-taught computer engineer with a passion for visual arts and storytelling. I love it when science and art come together.
-          </p>
-        </MarkdownContent>
-      </Bio>
       <Avatar alt="Selfi" src={Selfish} component={AContainer}
         className={classes.avatar} variant='circle'/>
     </SContainer>

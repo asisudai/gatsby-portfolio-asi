@@ -81,6 +81,14 @@ const Description = styled.p`
   font-size: 1.0rem;
 `
 
+const SubDescription = styled(Description)`
+  font-size: 90%;
+  width: 70%;
+  margin: auto;
+  opacity: 85%;
+  padding: 10px;
+`
+
 const ContainerBottom = styled.div`
     // position: absolute;
     left: 50%;
@@ -101,13 +109,14 @@ const Scroller = ({href}) => {
 }
 
 
-const SContainer = ({ title, description, subtitle, href, children }) => {
+const SContainer = ({ title, subtitle, description, subdescription, href, children }) => {
   return (
     <OuterContainer id={title}>
       <Container>
         <NameHeader>{title}</NameHeader>
         <SubTitle>{subtitle}</SubTitle>
         <Description>{description}</Description>
+        <SubDescription>{subdescription}</SubDescription>
         { children }
         {href && <Scroller href={href} />}
       </Container>
