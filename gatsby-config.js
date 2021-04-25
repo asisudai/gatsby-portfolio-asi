@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Asi Sudai`,
     subtitle: `Consultant & Software Developer`,
-    description: `Asi Soudai Pipeline & Software developer for ilm, TV and Game.`,
+    description: `Software developer for Film, TV and Game.`,
     author: `@asisudai`,
     github: "https://github.com/asisudai",
     fork: "https://github.com/asisudai/gatsby-portfolio-asi",
