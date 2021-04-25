@@ -10,7 +10,7 @@ import Contact from "../components/contact"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title='Software Developer' keywords={[`CG`, `Pipeline`, `VFX`, 'Development']} />
     <LandingBio data={data.site} href={"#" + data.skills.title}/>
     <Skills data={data.skills}/>
     <Experience data={data.experience} />

@@ -28,6 +28,7 @@
             { "name": "Katana", "link": "https://www.foundry.com/products/katana" },
             { "name": "Redshift", "link": "https://www.redshift3d.com/" },
             { "name": "Renderman", "link": "https://renderman.pixar.com/" },
+            { "name": "Arnold", "link": "https://www.arnoldrenderer.com/" },
             { "name": "Vray", "link": "https://www.chaosgroup.com/" },
             { "name": "Deadline", "link": "https://www.awsthinkbox.com/deadline" },
             { "name": "Qube", "link": "https://www.pipelinefx.com/  " },
