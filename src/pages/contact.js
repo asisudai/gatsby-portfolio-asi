@@ -31,7 +31,7 @@ const Contact = () => {
         <SContainer title='Contact'>
             <Container>
                 <form method="post"
-                    action="https://formspree.io/asisudai@gmail.com"
+                    action="https://formspree.io/f/xjvjkqjg"
                     autoComplete="off">
                     <TextField id="name" required="true"
                         error={false}
@@ -57,7 +57,7 @@ const Contact = () => {
                     <TextField id="message"
                         label="Message"
                         name="message"
-                        rows={3}
+                        rows={8}
                         fullWidth
                         style={{ marginTop: 8 }}
                         multiline
