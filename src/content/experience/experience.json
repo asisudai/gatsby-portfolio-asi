@@ -1,8 +1,12 @@
 {
-    "title": "Expereince",
+    "title": "Experience",
     "description": " Years of experience",
     "jobs":
     [
+        {
+            "primary": "Industrial Light & Magic",
+            "secondary": "VFX/Film"
+        },
         {
             "primary": "Stellar Creative Lab",
             "secondary": "Anim/T.V"

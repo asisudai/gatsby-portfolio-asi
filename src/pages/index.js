@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Skills from "../components/skills"
 import Experience from "../components/experience"
-// import Section from "../components/section"
+import Section from "../components/section"
 import Contact from "../components/contact"
 
 const IndexPage = ({ data }) => (
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
     <LandingBio data={data.site} href={"#" + data.skills.title}/>
     <Skills data={data.skills}/>
     <Experience data={data.experience} />
-    {/* <Section data={data.production.edges} markdowns={data.productionmd.edges} /> */}
+    <Section data={data.production.edges} markdowns={data.productionmd.edges} />
     <Contact data={data.site}/>
   </Layout>
 )

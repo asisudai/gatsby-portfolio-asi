@@ -36,7 +36,6 @@ const LandingBio = ({ data, href }) => {
     <SContainer title={data.siteMetadata.title}
       description={data.siteMetadata.description}
       subtitle={data.siteMetadata.subtitle}
-      // subdescription="Dyslexia doesn't mean you're dumb, It only means you need to find your own way of learning, what better than learn what you love. So I did! I'm a self-taught computer engineer with a passion for visual arts and storytelling. I love it when science and art come together."
       subdescription="I'm a self-taught computer engineer with a passion for visual arts and storytelling. I love it when science and art come together."
       href={href}>
       <Avatar alt="Selfi" src={Selfish} component={AContainer}
