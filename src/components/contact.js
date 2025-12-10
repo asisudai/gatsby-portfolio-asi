@@ -28,7 +28,7 @@ const Contact = ({ data }) => {
       description="Are you looking for a Pipeline Developer or a consultant?"
       subdescription="My expertise lies in establishing new animation studios from the ground up - establishing production technology (software and hardware) and hiring talented crews"
       // Joining ILM - need to comment this out
-      // subdescription="I'm available for short or long contracts. My expertise lays in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew."
+      // subdescription="I'm available for short or long contracts. My expertise lies in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew."
     >
       <CenterDiv>
         <StyledList component="nav" aria-label="main mailbox folders">
