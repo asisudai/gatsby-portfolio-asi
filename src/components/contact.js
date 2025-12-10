@@ -26,7 +26,7 @@ const Contact = ({ data }) => {
   return (
     <SContainer title="Need Help?"
       description="Are you looking for a Pipeline Developer or a consultant?"
-      subdescription="My expertise lays in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew."
+      subdescription="My expertise lies in establishing new animation studios from the ground up - establishing production technology (software and hardware) and hiring talented crews"
       // Joining ILM - need to comment this out
       // subdescription="I'm available for short or long contracts. My expertise lays in starting Animation studios from the ground up - establishing production technology software, hardware and hiring a talented crew."
     >
